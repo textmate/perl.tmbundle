@@ -865,6 +865,8 @@
 			<string>constant.other.bareword.perl</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(?&lt;!\\)((~\s*)?\/)(?=\S)(?=([^\\]|\\.)*\/)</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -872,16 +874,18 @@
 					<key>name</key>
 					<string>punctuation.definition.string.perl</string>
 				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.perl</string>
-				</dict>
 			</dict>
-			<key>match</key>
-			<string>(?&lt;!\\)((~\s*)?\/)(\S.*?)(?&lt;!\\)(\\{2})*(\/)</string>
+			<key>end</key>
+			<string>(\/)</string>
 			<key>name</key>
 			<string>string.regexp.find.perl</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
