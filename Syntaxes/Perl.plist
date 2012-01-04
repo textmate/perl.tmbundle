@@ -54,7 +54,7 @@
 			<key>comment</key>
 			<string>string.regexp.compile.perl</string>
 			<key>end</key>
-			<string>((([egimosx]*)))(?=(\s+\S|\s*[;\,\#\{\}\)]|$))</string>
+			<string>((([egimosxr]*)))(?=(\s+\S|\s*[;\,\#\{\}\)]|$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -301,7 +301,7 @@
 			<key>comment</key>
 			<string>string.regexp.replace.perl</string>
 			<key>end</key>
-			<string>((([egimosx]*)))(?=(\s+\S|\s*[;\,\#\{\}\)\]&gt;]|$))</string>
+			<string>((([egimosxr]*)))(?=(\s+\S|\s*[;\,\#\{\}\)\]&gt;]|$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -634,11 +634,11 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(?=s([^\s\w\[({&lt;]).*\1([egimos]*)([\}\)\;\,]|\s+))</string>
+			<string>\b(?=s([^\s\w\[({&lt;]).*\1([egimosr]*)([\}\)\;\,]|\s+))</string>
 			<key>comment</key>
 			<string>string.regexp.replaceXXX</string>
 			<key>end</key>
-			<string>((([egimos]*)))(?=([\}\)\;\,]|\s+|$))</string>
+			<string>((([egimosr]*)))(?=([\}\)\;\,]|\s+|$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -747,7 +747,7 @@
 			<key>comment</key>
 			<string>string.regexp.replace.extended</string>
 			<key>end</key>
-			<string>\2((([egimos]*x[egimos]*)))\b</string>
+			<string>\2((([egimosr]*x[egimosr]*)))\b</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -808,7 +808,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>'(?=[egimos]*x[egimos]*)\b</string>
+					<string>'(?=[egimosr]*x[egimosr]*)\b</string>
 					<key>name</key>
 					<string>string.regexp.replace.extended.simple_delimiter.perl</string>
 					<key>patterns</key>
@@ -831,7 +831,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>\1(?=[egimos]*x[egimos]*)\b</string>
+					<string>\1(?=[egimosr]*x[egimosr]*)\b</string>
 					<key>name</key>
 					<string>string.regexp.replace.extended.simple_delimiter.perl</string>
 					<key>patterns</key>
