@@ -18,15 +18,25 @@ TextMate::Executor.run(ENV["TM_PERL"] || "perl", "-I#{ENV["TM_BUNDLE_SUPPORT"]}"
 </string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@r</string>
 	<key>name</key>
 	<string>Run Script</string>
-	<key>output</key>
-	<string>showAsHTML</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
 	<key>scope</key>
 	<string>source.perl</string>
+	<key>semanticClass</key>
+	<string>process.run.script.perl</string>
 	<key>uuid</key>
 	<string>2F3DB2EF-6B9E-4E5F-87A8-3675680E5C0D</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
