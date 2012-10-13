@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
+use Env qw($PERLBREW_PERL $PERLBREW_ROOT);
 
 # cwd should be $TM_DIRECTORY
 # filename to check is $ARGV[0]
@@ -30,8 +31,15 @@ sub read_source {
     $file_source{$file} = { source => \@file_source, path => $path };
 }
 
-my @lines = `perl -Tcw "$file" 2>&1`;
+my $perl;
 
+if ($PERLBREW_PERL) {
+	$perl = "$PERLBREW_ROOT/perls/$PERLBREW_PERL/bin/perl";
+} else {
+	$perl = 'perl';
+}
+
+my @lines = `"$perl" -Tcw "$file" 2>&1`;
 my $lines = join '', @lines;
 
 if ((scalar(@lines) == 1) && ($lines =~ m/ syntax OK$/s)) {
