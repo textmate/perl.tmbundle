@@ -30,7 +30,7 @@ sub read_source {
     $file_source{$file} = { source => \@file_source, path => $path };
 }
 
-my @lines = `perl -Tcw "$file" 2>&1`;
+my @lines = `"\${TM_PERL:-perl}" -Tcw "$file" 2>&1`;
 
 my $lines = join '', @lines;
 
