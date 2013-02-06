@@ -743,7 +743,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(?=(?&lt;!\\)s\s*([^\s\w\[({&lt;]))</string>
+			<string>\b(?=(?&lt;!\\)s\s*([^\s\w\[({&lt;&gt;]))</string>
 			<key>comment</key>
 			<string>string.regexp.replace.extended</string>
 			<key>end</key>
