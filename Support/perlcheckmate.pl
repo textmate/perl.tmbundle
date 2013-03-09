@@ -4,6 +4,7 @@ use strict;
 
 # cwd should be $TM_DIRECTORY
 # filename to check is $ARGV[0]
+chdir($ENV{TM_PROJECT_DIRECTORY});
 
 my $file = $ARGV[0];
 
@@ -30,7 +31,7 @@ sub read_source {
     $file_source{$file} = { source => \@file_source, path => $path };
 }
 
-my @lines = `"\${TM_PERL:-perl}" -Tcw "$file" 2>&1`;
+my @lines = `"\${TM_PERL:-perl}" -Ilib -cw "$file" 2>&1`;
 
 my $lines = join '', @lines;
 
