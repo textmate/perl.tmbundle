@@ -2762,6 +2762,44 @@
 			<key>name</key>
 			<string>support.function.perl</string>
 		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.begin.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.end.perl</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Match empty brackets for ↩ snippet</string>
+			<key>match</key>
+			<string>(\{)(\})</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.begin.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.end.perl</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Match empty parenthesis for ↩ snippet</string>
+			<key>match</key>
+			<string>(\()(\))</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
