@@ -14,7 +14,7 @@ TextMate.save_if_untitled('pl')
 TextMate::Executor.make_project_master_current_document
 
 TextMate::Executor.run(ENV["TM_PERL"] || "perl", "-I#{ENV["TM_BUNDLE_SUPPORT"]}",
-     "-Mexception_handler", ENV["TM_FILEPATH"], :version_args =&gt; ["-e", 'printf "Perl v%vd", $^V;'])
+     "-Mexception_handler", ENV["TM_FILEPATH"], :create_error_pipe =&gt; true, :version_args =&gt; ["-e", 'printf "Perl v%vd", $^V;'])
 </string>
 	<key>input</key>
 	<string>document</string>
