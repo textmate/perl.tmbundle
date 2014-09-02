@@ -5,17 +5,39 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env bash
-[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+	<string>#!/usr/bin/env ruby18 -wKU
+require "#{ENV['TM_SUPPORT_PATH']}/lib/current_word"
+require "#{ENV['TM_SUPPORT_PATH']}/lib/exit_codes"
+require "#{ENV['TM_SUPPORT_PATH']}/lib/ui"
+require "shellwords"
 
-word=${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}
-(perldoc -u "$word" 2&gt;/dev/null || perldoc -u -f "$word" 2&gt;/dev/null) | pod2html --q --title "Perl Documentation - $word" 2&gt;/dev/null | sed -E 's|&lt;a href="#(item_)?([^"]+)"&gt;|&lt;a href="http://perldoc.perl.org/search.html?q=\2"&gt;|g'
-if [[ -e "${TM_DIRECTORY}/pod2htmd.tmp" ]]
-  then unlink "${TM_DIRECTORY}/pod2htmd.tmp"
-fi
-if [[ -e "${TM_DIRECTORY}/pod2htmi.tmp" ]]
-  then unlink "${TM_DIRECTORY}/pod2htmi.tmp"
-fi</string>
+Dir.chdir('/tmp')
+
+at_exit do
+  [ '/tmp/pod2htmd.tmp', '/tmp/pod2htmi.tmp' ].each do |file|
+    File.unlink(file) if File.exists?(file)
+  end
+end
+
+word = Word.current_word(':_A-Za-z0-9')
+if word.to_s.empty?
+  word = TextMate::UI.request_string(
+    :title =&gt; 'Documentation Search', 
+    :prompt =&gt; 'Search documentation for term:',
+    :button1 =&gt; 'Search'
+  )
+  TextMate.exit_discard if word.to_s.empty?
+end
+
+doc = %x{ perldoc 2&gt;/dev/null -u #{word.shellescape}  }
+doc = %x{ perldoc 2&gt;/dev/null -uf #{word.shellescape} } unless $? == 0
+TextMate.exit_show_tool_tip("No documentation for “#{word}”") unless $? == 0
+
+html = open("|pod2html --q --title 'Documentation for “'#{word.shellescape}'”'", 'r+') { |io| io &lt;&lt; doc; io.close_write; io.read }
+html.gsub(/&lt;a href="#(item_)?([^"]+)"&gt;/, '&lt;a href="http://perldoc.perl.org/search.html?q=\2"&gt;')
+
+STDOUT &lt;&lt; html
+</string>
 	<key>fallbackInput</key>
 	<string>word</string>
 	<key>input</key>
