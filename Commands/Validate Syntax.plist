@@ -10,15 +10,17 @@
 	<string>^(.*)line (\d+)(.*)$</string>
 	<key>command</key>
 	<string>#!/usr/bin/env bash
-[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; \
+    . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-. "${TM_SUPPORT_PATH}/lib/html.sh"
+. "${TM_SUPPORT_PATH}/lib/webpreview.sh"
+
 cd "${TM_DIRECTORY}"
 out=`"${TM_BUNDLE_SUPPORT}/perlcheckmate.pl" "${TM_FILEPATH}"`
 if [[ $out ]]
-  then htmlHeader "Perl syntax errors for ${TM_FILENAME}";
+  then html_header "Syntax Errors in “${TM_FILENAME}”";
        exit_show_html "$out";
-       htmlFooter
+       html_footer
   else exit_show_tool_tip "No errors!"
 fi</string>
 	<key>input</key>
