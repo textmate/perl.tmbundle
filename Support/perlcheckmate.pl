@@ -4,7 +4,6 @@ use strict;
 
 # cwd should be $TM_DIRECTORY
 # filename to check is $ARGV[0]
-chdir($ENV{TM_PROJECT_DIRECTORY});
 
 my $file = $ARGV[0];
 

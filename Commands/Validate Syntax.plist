@@ -16,7 +16,7 @@
 . "${TM_SUPPORT_PATH}/lib/webpreview.sh"
 
 cd "${TM_DIRECTORY}"
-out=`"${TM_BUNDLE_SUPPORT}/perlcheckmate.pl" "${TM_FILEPATH}"`
+out=`"${TM_BUNDLE_SUPPORT}/perlcheckmate.pl" "${TM_FILENAME}"`
 if [[ $out ]]
   then html_header "Syntax Errors in “${TM_FILENAME}”";
        exit_show_html "$out";
