@@ -14,6 +14,8 @@
 	</array>
 	<key>firstLineMatch</key>
 	<string>(^#!.*\bperl6\b)|use\s+v6</string>
+	<key>keyEquivalent</key>
+	<string>^~P</string>
 	<key>name</key>
 	<string>Perl 6</string>
 	<key>patterns</key>
@@ -24,13 +26,13 @@
 			<key>end</key>
 			<string>^=end</string>
 			<key>name</key>
-			<string>comment.block</string>
+			<string>comment.block.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>#.*$</string>
 			<key>name</key>
-			<string>comment.line.number-sign</string>
+			<string>comment.line.number-sign.perl6</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -40,7 +42,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin</string>
+					<string>punctuation.definition.string.begin.perl6</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -50,11 +52,11 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end</string>
+					<string>punctuation.definition.string.end.perl6</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.single</string>
+			<string>string.quoted.single.perl6</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -73,7 +75,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin</string>
+					<string>punctuation.definition.string.begin.perl6</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -83,18 +85,18 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end</string>
+					<string>punctuation.definition.string.end.perl6</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.double</string>
+			<string>string.quoted.double.perl6</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\[abtnfre"\\]</string>
 					<key>name</key>
-					<string>constant.character.escape</string>
+					<string>constant.character.escape.perl6</string>
 				</dict>
 			</array>
 		</dict>
@@ -102,7 +104,7 @@
 			<key>match</key>
 			<string>\b\$\w+\b</string>
 			<key>name</key>
-			<string>variable.other</string>
+			<string>variable.other.perl6</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -110,109 +112,109 @@
 			<key>end</key>
 			<string>}</string>
 			<key>name</key>
-			<string>string.regexp.grammar.token</string>
+			<string>string.regexp.grammar.token.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?:\b|\B(?&lt;=[-']))(?&lt;!(?:ACHTUNG|ATTN|ATTENTION|FIXME|NB|TODO|TBD|WTF|XXX|NOTE))(?:\b|[-']\B\@=\))</string>
 			<key>name</key>
-			<string>builtins.attention</string>
+			<string>markup.bold.attention.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(macro|sub|submethod|method|multi|proto|only|rule|token|regex|category)\b</string>
 			<key>name</key>
-			<string>builtins.declare.routine</string>
+			<string>storage.type.declare.routine.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(module|class|role|package|enum|grammar|slang|subset)\b</string>
 			<key>name</key>
-			<string>builtins.module</string>
+			<string>keyword.other.module.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(self)\b</string>
 			<key>name</key>
-			<string>builtins.variable</string>
+			<string>variable.language.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(use|require)\b</string>
 			<key>name</key>
-			<string>builtins.include</string>
+			<string>keyword.other.include.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(if|else|elsif|unless)\b</string>
 			<key>name</key>
-			<string>builtins.conditional</string>
+			<string>keyword.control.conditional.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(let|my|our|state|temp|has|constant)\b</string>
 			<key>name</key>
-			<string>builtins.variable.storage</string>
+			<string>storage.type.variable.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(for|loop|repeat|while|until|gather|given)\b</string>
 			<key>name</key>
-			<string>builtins.repeat</string>
+			<string>keyword.control.repeat.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(take|do|when|next|last|redo|return|contend|maybe|defer|default|exit|make|continue|break|goto|leave|async|lift)\b</string>
 			<key>name</key>
-			<string>builtins.flowcontrol</string>
+			<string>keyword.control.flowcontrol.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(is|as|but|trusts|of|returns|handles|where|augment|supersede)\b</string>
 			<key>name</key>
-			<string>builtins.type.constraints</string>
+			<string>storage.modifier.type.constraints.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(BEGIN|CHECK|INIT|START|FIRST|ENTER|LEAVE|KEEP|UNDO|NEXT|LAST|PRE|POST|END|CATCH|CONTROL|TEMP)\b</string>
 			<key>name</key>
-			<string>builtins.closure.trait</string>
+			<string>meta.function.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(die|fail|try|warn)\b</string>
 			<key>name</key>
-			<string>builtins.exception</string>
+			<string>keyword.control.control-handlers.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(prec|irs|ofs|ors|export|deep|binary|unary|reparsed|rw|parsed|cached|readonly|defequiv|will|ref|copy|inline|tighter|looser|equiv|assoc|required)\b</string>
 			<key>name</key>
-			<string>builtins.property</string>
+			<string>storage.modifier.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(NaN|Inf)\b</string>
 			<key>name</key>
-			<string>builtins.number</string>
+			<string>constant.numeric.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(oo|fatal)\b</string>
 			<key>name</key>
-			<string>builtins.pragma</string>
+			<string>keyword.other.pragma.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Object|Any|Junction|Whatever|Capture|MatchSignature|Proxy|Matcher|Package|Module|ClassGrammar|Scalar|Array|Hash|KeyHash|KeySet|KeyBagPair|List|Seq|Range|Set|Bag|Mapping|Void|UndefFailure|Exception|Code|Block|Routine|Sub|MacroMethod|Submethod|Regex|Str|Blob|Char|ByteCodepoint|Grapheme|StrPos|StrLen|Version|NumComplex|num|complex|Bit|bit|bool|True|FalseIncreasing|Decreasing|Ordered|Callable|AnyCharPositional|Associative|Ordering|KeyExtractorComparator|OrderingPair|IO|KitchenSink|RoleInt|int|int1|int2|int4|int8|int16|int32|int64Rat|rat|rat1|rat2|rat4|rat8|rat16|rat32|rat64Buf|buf|buf1|buf2|buf4|buf8|buf16|buf32|buf64UInt|uint|uint1|uint2|uint4|uint8|uint16|uint32uint64|Abstraction|utf8|utf16|utf32)\b</string>
+			<string>\b(Object|Any|Junction|Whatever|Capture|MatchSignature|Proxy|Matcher|Package|Module|ClassGrammar|Scalar|Array|Hash|KeyHash|KeySet|KeyBagPair|List|Seq|Range|Set|Bag|Mapping|Void|UndefFailure|Exception|Code|Block|Routine|Sub|MacroMethod|Submethod|Regex|Str|str|Blob|Char|ByteCodepoint|Grapheme|StrPos|StrLen|Version|NumComplex|num|complex|Bit|bit|bool|True|FalseIncreasing|Decreasing|Ordered|Callable|AnyCharPositional|Associative|Ordering|KeyExtractorComparator|OrderingPair|IO|KitchenSink|RoleInt|int|int1|int2|int4|int8|int16|int32|int64Rat|rat|rat1|rat2|rat4|rat8|rat16|rat32|rat64Buf|buf|buf1|buf2|buf4|buf8|buf16|buf32|buf64UInt|uint|uint1|uint2|uint4|uint8|uint16|uint32uint64|Abstraction|utf8|utf16|utf32)\b</string>
 			<key>name</key>
-			<string>builtins.type</string>
+			<string>support.type.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(div|x|xx|mod|also|leg|cmp|before|after|eq|ne|le|lt|gt|ge|eqv|ff|fff|and|andthen|Z|X|or|xor|orelse|extra|m|mm|rx|s|tr)\b</string>
 			<key>name</key>
-			<string>builtins.operator</string>
+			<string>keyword.operator.perl6</string>
 		</dict>
 	</array>
 	<key>repository</key>
