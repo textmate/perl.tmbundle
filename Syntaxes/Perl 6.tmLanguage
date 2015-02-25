@@ -216,6 +216,34 @@
 			<key>name</key>
 			<string>keyword.operator.perl6</string>
 		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\$|@|%|&amp;)(\*|:|!|\^|~|=|\?|(&lt;(?=.+&gt;)))?([A-Za-z_])([A-Za-z0-9_]|[\-'][A-Za-z0-9_])*</string>
+			<key>name</key>
+			<string>variable.other.basic.perl6</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(eager|hyper|substr|index|rindex|grep|map|sort|join|lines|hints|chmod|split|reduce|min|max|reverse|truncate|zip|cat|roundrobin|classify|first|sum|keys|values|pairs|defined|delete|exists|elems|end|kv|any|all|one|wrap|shape|key|value|name|pop|push|shift|splice|unshift|floor|ceiling|abs|exp|log|log10|rand|sign|sqrt|sin|cos|tan|round|strand|roots|cis|unpolar|polar|atan2|pick|chop|p5chop|chomp|p5chomp|lc|lcfirst|uc|ucfirst|capitalize|normalize|pack|unpack|quotemeta|comb|samecase|sameaccent|chars|nfd|nfc|nfkd|nfkc|printf|sprintf|caller|evalfile|run|runinstead|nothing|want|bless|chr|ord|gmtime|time|eof|localtime|gethost|getpw|chroot|getlogin|getpeername|kill|fork|wait|perl|graphs|codes|bytes|clone|print|open|read|write|readline|say|seek|close|opendir|readdir|slurp|pos|fmt|vec|link|unlink|symlink|uniq|pair|asin|atan|sec|cosec|cotan|asec|acosec|acotan|sinh|cosh|tanh|asinh|done|acos|acosh|atanh|sech|cosech|cotanh|sech|acosech|acotanh|asech|ok|nok|plan_ok|dies_ok|lives_ok|skip|todo|pass|flunk|force_todo|use_ok|isa_ok|diag|is_deeply|isnt|like|skip_rest|unlike|cmp_ok|eval_dies_ok|nok_error|eval_lives_ok|approx|is_approx|throws_ok|version_lt|plan|EVAL|succ|pred|times|nonce|once|signature|new|connect|operator|undef|undefine|sleep|from|to|infix|postfix|prefix|circumfix|postcircumfix|minmax|lazy|count|unwrap|getc|pi|e|context|void|quasi|body|each|contains|rewinddir|subst|can|isa|flush|arity|assuming|rewind|callwith|callsame|nextwith|nextsame|attr|eval_elsewhere|none|srand|trim|trim_start|trim_end|lastcall|WHAT|WHERE|HOW|WHICH|VAR|WHO|WHENCE|ACCEPTS|REJECTS|not|true|iterator|by|re|im|invert|flip|gist|flat|tree|is-prime|throws_like|trans)\b</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>sub(.*){</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.function.perl6</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>entity.name.function.perl6</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
