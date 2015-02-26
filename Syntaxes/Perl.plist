@@ -13,6 +13,7 @@
 		<string>pod</string>
 		<string>t</string>
 		<string>PL</string>
+		<string>psgi</string>
 	</array>
 	<key>firstLineMatch</key>
 	<string>^#!.*\bperl\b</string>
