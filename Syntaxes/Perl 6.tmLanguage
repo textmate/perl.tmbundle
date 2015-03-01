@@ -102,7 +102,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)\s*{{</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*{{</string>
 			<key>end</key>
 			<string>}}</string>
 			<key>name</key>
@@ -111,13 +111,13 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#qq_string_content</string>
+					<string>#qq_brace_string_content</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)\s*\(\(</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\(\(</string>
 			<key>end</key>
 			<string>\)\)</string>
 			<key>name</key>
@@ -132,7 +132,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)\s*\[\[</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\[\[</string>
 			<key>end</key>
 			<string>\]\]</string>
 			<key>name</key>
@@ -147,7 +147,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)\s*{</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*{</string>
 			<key>end</key>
 			<string>}</string>
 			<key>name</key>
@@ -156,13 +156,13 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#qq_string_content</string>
+					<string>#qq_brace_string_content</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)(\s*:w(ords)?)?\s*/</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*/</string>
 			<key>end</key>
 			<string>/</string>
 			<key>name</key>
@@ -177,7 +177,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)\s*\(</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\(</string>
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
@@ -192,7 +192,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(qq?|Q)\s*\[</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\[</string>
 			<key>end</key>
 			<string>\]</string>
 			<key>name</key>
@@ -207,7 +207,37 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>q:to /(.+)/</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*'</string>
+			<key>end</key>
+			<string>'</string>
+			<key>name</key>
+			<string>string.quoted.single.heredoc.single.perl6</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#qq_single_string_content</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*"</string>
+			<key>end</key>
+			<string>"</string>
+			<key>name</key>
+			<string>string.quoted.single.heredoc.double.perl6</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#qq_double_string_content</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>qq?:to\s*/(.+)/</string>
 			<key>end</key>
 			<string>\1</string>
 			<key>name</key>
@@ -330,17 +360,45 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>qq_brace_string_content</key>
+		<dict>
+			<key>begin</key>
+			<string>{</string>
+			<key>end</key>
+			<string>}</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#qq_brace_string_content</string>
+				</dict>
+			</array>
+		</dict>
 		<key>qq_bracket_string_content</key>
 		<dict>
 			<key>begin</key>
-			<string>\(</string>
+			<string>\[</string>
 			<key>end</key>
-			<string>\)</string>
+			<string>\]</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>include</key>
 					<string>#qq_bracket_string_content</string>
+				</dict>
+			</array>
+		</dict>
+		<key>qq_double_string_content</key>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>end</key>
+			<string>"</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#qq_double_string_content</string>
 				</dict>
 			</array>
 		</dict>
@@ -358,6 +416,20 @@
 				</dict>
 			</array>
 		</dict>
+		<key>qq_single_string_content</key>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+			<key>end</key>
+			<string>'</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#qq_single_string_content</string>
+				</dict>
+			</array>
+		</dict>
 		<key>qq_slash_string_content</key>
 		<dict>
 			<key>begin</key>
@@ -369,20 +441,6 @@
 				<dict>
 					<key>include</key>
 					<string>#qq_slash_string_content</string>
-				</dict>
-			</array>
-		</dict>
-		<key>qq_string_content</key>
-		<dict>
-			<key>begin</key>
-			<string>{</string>
-			<key>end</key>
-			<string>}</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#qq_string_content</string>
 				</dict>
 			</array>
 		</dict>
