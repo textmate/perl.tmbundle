@@ -102,7 +102,15 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*{{</string>
+			<string>q(q|to|heredoc)*\s*:?(q|to|heredoc)*\s*/(.+)/</string>
+			<key>end</key>
+			<string>\3</string>
+			<key>name</key>
+			<string>string.quoted.single.heredoc.perl6</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*{{</string>
 			<key>end</key>
 			<string>}}</string>
 			<key>name</key>
@@ -117,7 +125,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\(\(</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*\(\(</string>
 			<key>end</key>
 			<string>\)\)</string>
 			<key>name</key>
@@ -132,7 +140,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\[\[</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*\[\[</string>
 			<key>end</key>
 			<string>\]\]</string>
 			<key>name</key>
@@ -147,7 +155,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*{</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*{</string>
 			<key>end</key>
 			<string>}</string>
 			<key>name</key>
@@ -162,7 +170,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*/</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*/</string>
 			<key>end</key>
 			<string>/</string>
 			<key>name</key>
@@ -177,7 +185,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\(</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*\(</string>
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
@@ -192,7 +200,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*\[</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*\[</string>
 			<key>end</key>
 			<string>\]</string>
 			<key>name</key>
@@ -207,7 +215,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*'</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*'</string>
 			<key>end</key>
 			<string>'</string>
 			<key>name</key>
@@ -222,7 +230,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|to|heredoc|regexp|substr|trans|codes|p|path)*\s*"</string>
+			<string>(q|Q)(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*:?(x|exec|w|words|ww|quotewords|v|val|q|single|qq|double|s|scalar|a|array|h|hash|f|function|c|closure|b|blackslash|regexp|substr|trans|codes|p|path)*\s*"</string>
 			<key>end</key>
 			<string>"</string>
 			<key>name</key>
@@ -234,14 +242,6 @@
 					<string>#qq_double_string_content</string>
 				</dict>
 			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>qq?:to\s*/(.+)/</string>
-			<key>end</key>
-			<string>\1</string>
-			<key>name</key>
-			<string>string.quoted.single.heredoc.perl6</string>
 		</dict>
 		<dict>
 			<key>match</key>
