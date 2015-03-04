@@ -634,11 +634,11 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(?=s([^\s\w\[({&lt;]).*\1([egimosradlu]*)([\}\)\;\,]|\s+))</string>
+			<string>\b(?=s([^\s\w\[({&lt;]).*\1([egimosxradlu]*)([\}\)\;\,]|\s+))</string>
 			<key>comment</key>
 			<string>string.regexp.replaceXXX</string>
 			<key>end</key>
-			<string>((([egimosradlu]*)))(?=([\}\)\;\,]|\s+|$))</string>
+			<string>((([egimosxradlu]*)))(?=([\}\)\;\,]|\s+|$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
