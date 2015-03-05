@@ -55,7 +55,7 @@
 			<key>comment</key>
 			<string>string.regexp.compile.perl</string>
 			<key>end</key>
-			<string>((([egimosxradlu]*)))(?=(\s+\S|\s*[;\,\#\{\}\)]|$))</string>
+			<string>((([egimosxradlupc]*)))(?=(\s+\S|\s*[;\,\#\{\}\)]|$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -302,7 +302,7 @@
 			<key>comment</key>
 			<string>string.regexp.replace.perl</string>
 			<key>end</key>
-			<string>((([egimosxradlu]*)))(?=(\s+\S|\s*[;\,\#\{\}\)\]&gt;]|$))</string>
+			<string>((([egimosxradlupc]*)))(?=(\s+\S|\s*[;\,\#\{\}\)\]&gt;]|$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -748,7 +748,7 @@
 			<key>comment</key>
 			<string>string.regexp.replace.extended</string>
 			<key>end</key>
-			<string>\2((([egimosradlu]*x[egimosradlu]*)))\b</string>
+			<string>\2((([egimosradlupc]*x[egimosradlupc]*)))\b</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -809,7 +809,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>'(?=[egimosradlu]*x[egimosradlu]*)\b</string>
+					<string>'(?=[egimosradlupc]*x[egimosradlupc]*)\b</string>
 					<key>name</key>
 					<string>string.regexp.replace.extended.simple_delimiter.perl</string>
 					<key>patterns</key>
@@ -832,7 +832,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>\1(?=[egimosradlu]*x[egimosradlu]*)\b</string>
+					<string>\1(?=[egimosradlupc]*x[egimosradlupc]*)\b</string>
 					<key>name</key>
 					<string>string.regexp.replace.extended.simple_delimiter.perl</string>
 					<key>patterns</key>
