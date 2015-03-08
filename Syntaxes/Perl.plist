@@ -998,7 +998,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(BEGIN|END|DESTROY)\b</string>
+			<string>^\s*(BEGIN|UNITCHECK|CHECK|INIT|END|DESTROY)\b</string>
 			<key>name</key>
 			<string>meta.function.perl</string>
 		</dict>
