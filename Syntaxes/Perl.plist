@@ -1241,7 +1241,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(__FILE__|__LINE__|__PACKAGE__)\b</string>
+			<string>\b(__FILE__|__LINE__|__PACKAGE__|__SUB__|__DATA__|__END__)\b</string>
 			<key>name</key>
 			<string>constant.language.perl</string>
 		</dict>
