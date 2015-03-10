@@ -974,7 +974,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(sub)\s+([-a-zA-Z0-9_]+)\s*(\([\$\@\*;]*\))?</string>
+			<string>\b(sub)(?:\s+([-a-zA-Z0-9_]+))?\s*(?:\([\$\@\*;]*\))?[^\w\{]</string>
 			<key>name</key>
 			<string>meta.function.perl</string>
 		</dict>
@@ -1265,7 +1265,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(and|or|xor|as)\b</string>
+			<string>\b(and|or|xor|as|not)\b</string>
 			<key>name</key>
 			<string>keyword.operator.logical.perl</string>
 		</dict>
@@ -2762,6 +2762,23 @@
 					<string>#variable</string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.perl</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b(x)\s*(\d+)\b</string>
 		</dict>
 		<dict>
 			<key>match</key>
