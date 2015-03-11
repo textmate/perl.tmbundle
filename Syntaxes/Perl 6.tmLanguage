@@ -5,11 +5,8 @@
 	<key>fileTypes</key>
 	<array>
 		<string>p6</string>
-		<string>pl</string>
 		<string>pl6</string>
-		<string>pm</string>
 		<string>pm6</string>
-		<string>t</string>
 		<string>nqp</string>
 	</array>
 	<key>firstLineMatch</key>
