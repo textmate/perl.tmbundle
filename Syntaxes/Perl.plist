@@ -2179,13 +2179,6 @@
 			</dict>
 			<key>name</key>
 			<string>string.quoted.other.q.perl</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -2594,10 +2587,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#nested_parens</string>
 				</dict>
 			</array>
@@ -2627,10 +2616,6 @@
 			<string>string.quoted.other.q-brace.perl</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
 				<dict>
 					<key>include</key>
 					<string>#nested_braces</string>
@@ -2664,10 +2649,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#nested_brackets</string>
 				</dict>
 			</array>
@@ -2697,10 +2678,6 @@
 			<string>string.quoted.other.q-ltgt.perl</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
 				<dict>
 					<key>include</key>
 					<string>#nested_ltgt</string>
