@@ -10,7 +10,7 @@
 		<string>nqp</string>
 	</array>
 	<key>firstLineMatch</key>
-	<string>(^#!.*\bperl6\b)|use\s+v6</string>
+	<string>(^#!.*\b(perl6|nqp)\b)|use\s+v6</string>
 	<key>keyEquivalent</key>
 	<string>^~P</string>
 	<key>name</key>
