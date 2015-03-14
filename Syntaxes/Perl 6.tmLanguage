@@ -73,7 +73,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(module|class|role|package|enum|grammar|slang|subset)(\s+)(((?:::|')?(?:[A-Za-z0-9\-]+))+)</string>
+			<string>(class|enum|grammar|knowhow|module|package|role|slang|subset)(\s+)(((?:::|')?(?:[A-Za-z0-9\-]+))+)</string>
 			<key>name</key>
 			<string>meta.class.perl.6</string>
 		</dict>
