@@ -2157,7 +2157,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\bqw?\s*([^\(\{\[\&lt;\w\s])</string>
+			<string>(?&lt;!-&gt;)\bqw?\s*([^\(\{\[\&lt;\w\s])</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
