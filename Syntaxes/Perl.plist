@@ -1235,7 +1235,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(s|tr|y)\s*([^A-Za-z0-9\s])(.*?)(?&lt;!\\)(\\{2})*(\2)(.*?)(?&lt;!\\)(\\{2})*(\2)</string>
+			<string>\b(tr|y)\s*([^A-Za-z0-9\s])(.*?)(?&lt;!\\)(\\{2})*(\2)(.*?)(?&lt;!\\)(\\{2})*(\2)</string>
 			<key>name</key>
 			<string>string.regexp.replace.perl</string>
 		</dict>
