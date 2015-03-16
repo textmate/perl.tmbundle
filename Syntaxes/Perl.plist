@@ -2806,10 +2806,63 @@
 	<dict>
 		<key>escaped_char</key>
 		<dict>
-			<key>match</key>
-			<string>\\.</string>
-			<key>name</key>
-			<string>constant.character.escape.perl</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\\d+</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\c[^\s\\]</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\g(?:\{(?:\w*|-\d+)\}|\d+)</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\k(?:\{\w*\}|&lt;\w*&gt;|'\w*')</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\N\{[^\}]*\}</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\o\{\d*\}</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\(?:p|P)(?:\{\w*\}|P)</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\x(?:\w+|\{\w*\})?</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.perl</string>
+				</dict>
+			</array>
 		</dict>
 		<key>line_comment</key>
 		<dict>
