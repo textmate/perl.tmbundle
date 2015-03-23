@@ -1338,7 +1338,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(&lt;=&gt;| =&gt;|-&gt;)</string>
+			<string>(&lt;=&gt;|=&gt;|-&gt;)</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.perl</string>
 		</dict>
