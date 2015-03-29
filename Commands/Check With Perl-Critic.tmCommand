@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/ruby
+
+# -- Imports -------------------------------------------------------------------
+
+require ENV['TM_BUNDLE_SUPPORT'] + '/perlcritic.rb'
+
+# -- Main ----------------------------------------------------------------------
+
+perl_critic</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>~@c</string>
+	<key>name</key>
+	<string>Check With Perl-Critic</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>perlcritic</string>
+			<key>locations</key>
+			<array>
+				<string>/usr/local/bin/perlcritic</string>
+			</array>
+			<key>variable</key>
+			<string>TM_PERLCRITIC</string>
+		</dict>
+	</array>
+	<key>scope</key>
+	<string>source.perl</string>
+	<key>uuid</key>
+	<string>3F862332-074A-447B-AF5B-00D54FAA50F7</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
