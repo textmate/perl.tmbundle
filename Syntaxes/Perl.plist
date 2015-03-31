@@ -207,6 +207,12 @@
 					<key>patterns</key>
 					<array>
 						<dict>
+							<key>comment</key>
+							<string>This is to prevent thinks like qr/foo$/ to treat $/ as a variable</string>
+							<key>match</key>
+							<string>\$(?=[^\s\w\\'\{\[\(\&lt;])</string>
+						</dict>
+						<dict>
 							<key>include</key>
 							<string>#escaped_char</string>
 						</dict>
