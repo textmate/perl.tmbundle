@@ -1191,19 +1191,9 @@
 					<key>name</key>
 					<string>entity.name.type.class.perl</string>
 				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>comment.line.number-sign.perl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.perl</string>
-				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(package)\s+(\S+)\s*((#).*)?$\n?</string>
+			<string>^\s*(package)\s+([^\s;]+)</string>
 			<key>name</key>
 			<string>meta.class.perl</string>
 		</dict>
@@ -1320,7 +1310,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!-&gt;)\b(continue|die|do|else|elsif|exit|for|foreach|goto|if|last|next|redo|return|select|unless|until|wait|while|switch|case|package|require|use|eval)\b</string>
+			<string>(?&lt;!-&gt;)\b(continue|die|do|else|elsif|exit|for|foreach|goto|if|last|next|redo|return|select|unless|until|wait|while|switch|case|require|use|eval)\b</string>
 			<key>name</key>
 			<string>keyword.control.perl</string>
 		</dict>
