@@ -3202,7 +3202,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\\x(?:\w+|\{\w*\})?</string>
+					<string>\\x(?:[0-9a-zA-Z]{2}|\{\w*\})?</string>
 					<key>name</key>
 					<string>constant.character.escape.perl</string>
 				</dict>
