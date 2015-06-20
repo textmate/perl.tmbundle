@@ -540,6 +540,45 @@
 							<string>#variable</string>
 						</dict>
 						<dict>
+							<key>begin</key>
+							<string>\[</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.character-class.begin.perl</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>\]</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.character-class.end.perl</string>
+								</dict>
+							</dict>
+							<key>name</key>
+							<string>constant.other.character-class.set.perl</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>comment</key>
+									<string>This is to prevent thinks like qr/foo$/ to treat $/ as a variable</string>
+									<key>match</key>
+									<string>\$(?=[^\s\w'\{\[\(\&lt;])</string>
+									<key>name</key>
+									<string>keyword.control.anchor.perl</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#escaped_char</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
 							<key>include</key>
 							<string>#nested_parens_interpolated</string>
 						</dict>
