@@ -1040,7 +1040,7 @@
 			<key>comment</key>
 			<string>string.regexp.replace.extended</string>
 			<key>end</key>
-			<string>\2((([egimosradlupc]*x[egimosradlupc]*)))\b</string>
+			<string>((([egimosradlupc]*x[egimosradlupc]*)))\b</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
