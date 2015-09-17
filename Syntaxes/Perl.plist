@@ -305,7 +305,7 @@
 			<key>applyEndPatternLast</key>
 			<integer>1</integer>
 			<key>begin</key>
-			<string>\b(?=m\s*[^\sa-zA-Z0-9])</string>
+			<string>(?&lt;!\{|\+|\-)\b(?=m\s*[^\sa-zA-Z0-9])</string>
 			<key>comment</key>
 			<string>string.regexp.find-m.perl</string>
 			<key>end</key>
@@ -504,7 +504,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(m)\s*([^\sa-zA-Z0-9'\{\[\(\&lt;])</string>
+					<string>(?&lt;!\{|\+|\-)(m)\s*([^\sa-zA-Z0-9'\{\[\(\&lt;])</string>
 					<key>captures</key>
 					<dict>
 						<key>0</key>
