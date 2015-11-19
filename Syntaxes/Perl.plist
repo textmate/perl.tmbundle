@@ -1156,7 +1156,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;=\(|\{|~|&amp;)\s*((\/))</string>
+			<string>(?&lt;=\(|\{|~|&amp;|\||if|unless|^)\s*((\/))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
