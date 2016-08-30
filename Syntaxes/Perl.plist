@@ -1360,7 +1360,7 @@
 				</dict>
 			</dict>
 			<key>contentName</key>
-			<string>text.plain</string>
+			<string>comment.block.documentation.perl</string>
 			<key>end</key>
 			<string>\z</string>
 		</dict>
