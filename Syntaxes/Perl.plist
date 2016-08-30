@@ -30,19 +30,31 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^=[a-zA-Z]+</string>
-			<key>captures</key>
+			<string>^(?==[a-zA-Z]+)</string>
+			<key>end</key>
+			<string>^(=cut\b.*$)</string>
+			<key>endCaptures</key>
 			<dict>
-				<key>0</key>
+				<key>1</key>
 				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.perl</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#pod</string>
+						</dict>
+					</array>
 				</dict>
 			</dict>
-			<key>end</key>
-			<string>^=cut</string>
 			<key>name</key>
 			<string>comment.block.documentation.perl</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#pod</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -1363,6 +1375,13 @@
 			<string>comment.block.documentation.perl</string>
 			<key>end</key>
 			<string>\z</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#pod</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -3530,6 +3549,172 @@
 				<dict>
 					<key>include</key>
 					<string>#nested_parens_interpolated</string>
+				</dict>
+			</array>
+		</dict>
+		<key>pod</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>^=(pod|back|cut)\b</string>
+					<key>name</key>
+					<string>storage.type.class.pod.perl</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>^(=begin)\s+(html)\s*$</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.class.pod.perl</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.pod.perl</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>text.embedded.html.basic</string>
+					<key>end</key>
+					<string>^(=end)\s+(html)|^(?==cut)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.class.pod.perl</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.pod.perl</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>meta.embedded.pod.perl</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>text.html.basic</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.class.pod.perl</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.pod.perl</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#pod-formatting</string>
+								</dict>
+							</array>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>^(=(?:head[1-4]|item|over|encoding|begin|end|for))\b\s*(.*)</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#pod-formatting</string>
+				</dict>
+			</array>
+		</dict>
+		<key>pod-formatting</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>markup.italic.pod.perl</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.italic.pod.perl</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>I(?:&lt;([^&lt;&gt;]+)&gt;|&lt;+(\s+(?:(?&lt;!\s)&gt;|[^&gt;])+\s+)&gt;+)</string>
+					<key>name</key>
+					<string>entity.name.type.instance.pod.perl</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>markup.bold.pod.perl</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.bold.pod.perl</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>B(?:&lt;([^&lt;&gt;]+)&gt;|&lt;+(\s+(?:(?&lt;!\s)&gt;|[^&gt;])+\s+)&gt;+)</string>
+					<key>name</key>
+					<string>entity.name.type.instance.pod.perl</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>markup.raw.pod.perl</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.raw.pod.perl</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>C(?:&lt;([^&lt;&gt;]+)&gt;|&lt;+(\\s+(?:(?&lt;!\\s)&gt;|[^&gt;])+\\s+)&gt;+)</string>
+					<key>name</key>
+					<string>entity.name.type.instance.pod.perl</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.hyperlink.pod.perl</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>L&lt;([^&gt;]+)&gt;</string>
+					<key>name</key>
+					<string>entity.name.type.instance.pod.perl</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>[EFSXZ]&lt;[^&gt;]*&gt;</string>
+					<key>name</key>
+					<string>entity.name.type.instance.pod.perl</string>
 				</dict>
 			</array>
 		</dict>
