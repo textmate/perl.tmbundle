@@ -10,7 +10,21 @@
 		<string>nqp</string>
 	</array>
 	<key>firstLineMatch</key>
-	<string>(^#!.*\b(perl6|nqp)\b)|use\s+v6</string>
+	<string>(?x)
+# Hashbang
+^\#!.*\b(?:perl6|nqp)\b
+|
+# Perl 6 pragma
+\buse\s+v6\b
+|
+# Modeline
+(?i:
+  # Emacs
+  -\*-[^*]*(?:mode:\s*)?\bperl6(?:\s*;.*?)?\s*-\*-
+  |
+  # Vim
+  (?:vim?|ex):\s*(?:set?.*\s)?(?:syntax|filetype|ft)=perl6\s?(?:.*:)?
+)</string>
 	<key>keyEquivalent</key>
 	<string>^~P</string>
 	<key>name</key>
