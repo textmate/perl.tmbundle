@@ -20,10 +20,14 @@
 # Modeline
 (?i:
   # Emacs
-  -\*-(?:(?:(?!mode\s*:)[^:;]+:[^:;]+;)*\s*mode\s*:)?\s*perl6\s*(?:;[^:;]+:[^:;]+?)*;?\s*-\*-
+  -\*-(?:(?:(?!mode\s*:)[^:;]+:[^:;]+;)*\s*mode\s*:)?\s*
+	perl6
+  \s*(?:;[^:;]+:[^:;]+?)*;?\s*-\*-
   |
   # Vim
-  (?:vim?|ex):\s*(?:set?.*\s)?(?:syntax|filetype|ft)=perl6\s?(?:.*:)?
+  (?:(?:\s|^)vi(?:m[&lt;=&gt;]?\d+|m)?|(?!^)\sex)(?=:(?=\s*set?\s[^\n:]+:)|:(?!\s*set?\s))(?:(?:\s|\s*:\s*)\w*(?:\s*=(?:[^\n\\\s]|\\.)*)?)*[\s:](?:filetype|ft|syntax)\s*=
+	perl6
+  (?=\s|:|$)
 )</string>
 	<key>keyEquivalent</key>
 	<string>^~P</string>

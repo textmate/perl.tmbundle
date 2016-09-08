@@ -24,10 +24,14 @@
 # Modeline
 (?i:
   # Emacs
-  -\*-(?:(?:(?!mode\s*:)[^:;]+:[^:;]+;)*\s*mode\s*:)?\s*perl\s*(?:;[^:;]+:[^:;]+?)*;?\s*-\*-
+  -\*-(?:(?:(?!mode\s*:)[^:;]+:[^:;]+;)*\s*mode\s*:)?\s*
+	perl
+  \s*(?:;[^:;]+:[^:;]+?)*;?\s*-\*-
   |
   # Vim
-  (?:vim?|ex):\s*(?:set?.*\s)?(?:syntax|filetype|ft)=perl\s?(?:.*:)?
+  (?:(?:\s|^)vi(?:m[&lt;=&gt;]?\d+|m)?|(?!^)\sex)(?=:(?=\s*set?\s[^\n:]+:)|:(?!\s*set?\s))(?:(?:\s|\s*:\s*)\w*(?:\s*=(?:[^\n\\\s]|\\.)*)?)*[\s:](?:filetype|ft|syntax)\s*=
+	perl
+  (?=\s|:|$)
 )</string>
 	<key>keyEquivalent</key>
 	<string>^~P</string>
