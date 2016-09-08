@@ -24,7 +24,7 @@
 # Modeline
 (?i:
   # Emacs
-  -\*-[^*]*(?:mode:\s*)?\bperl(?:\s*;.*?)?\s*-\*-
+  -\*-(?:(?:(?!mode\s*:)[^:;]+:[^:;]+;)*\s*mode\s*:)?\s*perl\s*(?:;[^:;]+:[^:;]+?)*;?\s*-\*-
   |
   # Vim
   (?:vim?|ex):\s*(?:set?.*\s)?(?:syntax|filetype|ft)=perl\s?(?:.*:)?

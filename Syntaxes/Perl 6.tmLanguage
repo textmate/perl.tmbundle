@@ -20,7 +20,7 @@
 # Modeline
 (?i:
   # Emacs
-  -\*-[^*]*(?:mode:\s*)?\bperl6(?:\s*;.*?)?\s*-\*-
+  -\*-(?:(?:(?!mode\s*:)[^:;]+:[^:;]+;)*\s*mode\s*:)?\s*perl6\s*(?:;[^:;]+:[^:;]+?)*;?\s*-\*-
   |
   # Vim
   (?:vim?|ex):\s*(?:set?.*\s)?(?:syntax|filetype|ft)=perl6\s?(?:.*:)?
