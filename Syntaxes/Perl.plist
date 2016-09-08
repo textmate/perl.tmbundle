@@ -19,7 +19,7 @@
 	<key>firstLineMatch</key>
 	<string>(?x)
 # Hashbang
-^\#!.*[\s\/]perl(?:$|\s)
+^\#!.*(?:\s|\/|(?&lt;=!)\b)perl(?:$|\s)
 |
 # Modeline
 (?i:
