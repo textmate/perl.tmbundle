@@ -12,7 +12,7 @@
 	<key>firstLineMatch</key>
 	<string>(?x)
 # Hashbang
-^\#!.*[\s\/](?:perl6|nqp)(?:$|\s)
+^\#!.*(?:\s|\/|(?&lt;=!)\b)(?:perl6|nqp)(?:$|\s)
 |
 # Perl 6 pragma
 \buse\s+v6\b
