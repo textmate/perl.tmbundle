@@ -618,11 +618,11 @@
 			<key>applyEndPatternLast</key>
 			<integer>1</integer>
 			<key>begin</key>
-			<string>\b(?=(?&lt;!\&amp;)(s)(\s+\S|\s*[;\,\#\{\}\(\)\[&lt;]|$))</string>
+			<string>\b(?=(?&lt;!\&amp;)(s)(\s+\S|\s*[;\,\{\}\(\)\[&lt;]|$))</string>
 			<key>comment</key>
 			<string>string.regexp.replace.perl</string>
 			<key>end</key>
-			<string>((([egimosxradlupcn]*)))(?=(\s+\S|\s*[;\,\#\{\}\)\]&gt;]|\s*$))</string>
+			<string>((([egimosxradlupcn]*)))(?=(\s+\S|\s*[;\,\{\}\)\]&gt;]|\s*$))</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
