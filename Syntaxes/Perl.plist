@@ -1412,7 +1412,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\w)\-[rwx0RWXOezsfdlpSbctugkTBMAC]\b</string>
+			<string>(?&lt;!\w)\-[rwxoRWXOezsfdlpSbctugkTBMAC]\b</string>
 			<key>name</key>
 			<string>keyword.operator.filetest.perl</string>
 		</dict>
