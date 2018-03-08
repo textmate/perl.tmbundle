@@ -531,7 +531,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(?&lt;!\{|\+|\-)(m)(?!_)\s*([^\sa-zA-Z0-9'\{\[\(\&lt;])</string>
+					<string>\G(?&lt;!\{|\+|\-)(m)(?!_)\s*([^\sa-zA-Z0-9'\{\[\(\&lt;])</string>
 					<key>captures</key>
 					<dict>
 						<key>0</key>
