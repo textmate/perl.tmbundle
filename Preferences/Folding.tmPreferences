@@ -9,9 +9,17 @@
 	<key>settings</key>
 	<dict>
 		<key>foldingStartMarker</key>
-		<string>((\{|\[|\()\s*$)</string>
+		<string>(?x)
+		^  \s* (?![\s}]) .*				# Ensure a block doesnt both start and end on the line
+		\{ \s* ($|\#)					# Open block
+  	  | (\[|\() \s* ($|\#)
+	</string>
 		<key>foldingStopMarker</key>
-		<string>(^\s*(\}|\]|\)))</string>
+		<string>(?x)
+		^ \s* \}						# Close block
+		(?! .* \{ \s* ($|\#))			# Ensure a block doesnt both start and end on the line
+	  | ^ \s* (\]|\))
+	</string>
 	</dict>
 	<key>uuid</key>
 	<string>ABBA3E7D-D306-4E27-8DE3-FECBA5C5A6C6</string>
