@@ -22,12 +22,14 @@ sub realwarn { CORE::warn(@_); }
 sub realdie { CORE::die(@_); }
 
 sub longmess {
-    my ($arg, @rest) = shift;
+    my ($arg, @rest) = @_;
     {
         local $@;
         # XXX fix require to not clear $@?
         # don't use require unless we need to (for Safe compartments)
-        require Carp::Heavy unless $INC{"Carp/Heavy.pm"};
+        if ($] < 5.012) {
+            require Carp::Heavy unless $INC{"Carp/heavy.pm"};
+        }
     }
     # Icky backwards compatibility wrapper. :-(
     my $call_pack = caller();
