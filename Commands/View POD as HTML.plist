@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pod2html 2&gt;/dev/null &amp;&amp; rm -f pod2htmd.tmp pod2htmi.tmp</string>
+	<string>pod2html --cachedir=/tmp/ 2&gt;/dev/null &amp;&amp; rm -f /tmp/pod2htm*</string>
 	<key>input</key>
 	<string>document</string>
 	<key>keyEquivalent</key>
