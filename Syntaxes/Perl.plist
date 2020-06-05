@@ -1634,7 +1634,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"SQL"))(.*)\n?</string>
+			<string>((&lt;&lt;) *"(\s*SQL)")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1645,12 +1645,12 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.unquoted.heredoc.doublequote.perl</string>
+					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
+					<string>string.unquoted.heredoc.doublequote.perl</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -1666,7 +1666,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^\3$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1955,7 +1955,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'SQL'))(.*)\n?</string>
+			<string>((&lt;&lt;) *'(\s*)SQL')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1966,12 +1966,12 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.unquoted.heredoc.quote.perl</string>
+					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
+					<string>string.unquoted.heredoc.quote.perl</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -1987,7 +1987,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^\3$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
