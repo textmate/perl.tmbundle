@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>has ${1:name} =&gt; (
+    is =&gt; '${2:ro}',
+    isa =&gt; '${3:type}',
+);
+</string>
+	<key>disableAutoIndent</key>
+	<true/>
+	<key>name</key>
+	<string>has</string>
+	<key>scope</key>
+	<string>source.perl</string>
+	<key>tabTrigger</key>
+	<string>has</string>
+	<key>uuid</key>
+	<string>8EC3DA9E-9CDA-4D4B-B609-80D669B5D782</string>
+</dict>
+</plist>
