@@ -1754,7 +1754,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2059,7 +2059,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2095,7 +2095,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2131,7 +2131,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
