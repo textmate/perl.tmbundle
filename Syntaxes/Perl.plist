@@ -1430,7 +1430,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"HTML"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"HTML"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1448,7 +1448,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1462,7 +1462,7 @@
 			<key>contentName</key>
 			<string>text.html.embedded.perl</string>
 			<key>end</key>
-			<string>(^HTML$)</string>
+			<string>(^((?!\4)\s+)?HTML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1481,7 +1481,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"XML"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"XML"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1499,7 +1499,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1513,7 +1513,7 @@
 			<key>contentName</key>
 			<string>text.xml.embedded.perl</string>
 			<key>end</key>
-			<string>(^XML$)</string>
+			<string>(^((?!\4)\s+)?XML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1532,7 +1532,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"CSS"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"CSS"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1550,7 +1550,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1564,7 +1564,7 @@
 			<key>contentName</key>
 			<string>text.css.embedded.perl</string>
 			<key>end</key>
-			<string>(^CSS$)</string>
+			<string>(^((?!\4)\s+)?CSS$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1583,7 +1583,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"JAVASCRIPT"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"JAVASCRIPT"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1601,7 +1601,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1615,7 +1615,7 @@
 			<key>contentName</key>
 			<string>text.js.embedded.perl</string>
 			<key>end</key>
-			<string>(^JAVASCRIPT$)</string>
+			<string>(^((?!\4)\s+)?JAVASCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1634,7 +1634,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"SQL"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"SQL"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1652,7 +1652,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1666,7 +1666,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^((?!\4)\s+)?SQL$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1685,7 +1685,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"POSTSCRIPT"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"POSTSCRIPT"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1703,7 +1703,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1717,7 +1717,7 @@
 			<key>contentName</key>
 			<string>text.postscript.embedded.perl</string>
 			<key>end</key>
-			<string>(^POSTSCRIPT$)</string>
+			<string>(^((?!\4)\s+)?POSTSCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1736,7 +1736,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"([^"]*)"))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *"([^"]*)"))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1754,7 +1754,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>5</key>
+				<key>6</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1768,7 +1768,7 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.doublequote.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^((?!\4)\s+)?\5$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1783,7 +1783,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'HTML'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'HTML'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1801,7 +1801,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1815,7 +1815,7 @@
 			<key>contentName</key>
 			<string>text.html.embedded.perl</string>
 			<key>end</key>
-			<string>(^HTML$)</string>
+			<string>(^((?!\4)\s+)?HTML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1826,7 +1826,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'XML'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'XML'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1844,7 +1844,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1858,7 +1858,7 @@
 			<key>contentName</key>
 			<string>text.xml.embedded.perl</string>
 			<key>end</key>
-			<string>(^XML$)</string>
+			<string>(^((?!\4)\s+)?XML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1869,7 +1869,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'CSS'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'CSS'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1887,7 +1887,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1901,7 +1901,7 @@
 			<key>contentName</key>
 			<string>text.css.embedded.perl</string>
 			<key>end</key>
-			<string>(^CSS$)</string>
+			<string>(^((?!\4)\s+)?CSS$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1912,7 +1912,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'JAVASCRIPT'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'JAVASCRIPT'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1930,7 +1930,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1944,7 +1944,7 @@
 			<key>contentName</key>
 			<string>text.js.embedded.perl</string>
 			<key>end</key>
-			<string>(^JAVASCRIPT$)</string>
+			<string>(^((?!\4)\s+)?JAVASCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1955,7 +1955,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'SQL'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'SQL'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1973,7 +1973,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -1987,7 +1987,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^((?!\4)\s+)?SQL$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1998,7 +1998,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'POSTSCRIPT'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'POSTSCRIPT'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2016,7 +2016,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2030,7 +2030,7 @@
 			<key>contentName</key>
 			<string>source.postscript.embedded.perl</string>
 			<key>end</key>
-			<string>(^POSTSCRIPT$)</string>
+			<string>(^((?!\4)\s+)?POSTSCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2041,7 +2041,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'([^']*)'))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *'([^']*)'))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2059,7 +2059,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>5</key>
+				<key>6</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2073,11 +2073,11 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.quote.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^((?!\4)\s+)?\5$)</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *\\((?![=\d\$\( ])[^;,'"`\s\)]*)))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *\\((?![=\d\$\( ])[^;,'"`\s\)]*)))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2095,7 +2095,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>5</key>
+				<key>6</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2109,11 +2109,11 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.quote.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^((?!\4)\s+)?\5$)</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *`([^`]*)`))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *`([^`]*)`))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2131,7 +2131,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>5</key>
+				<key>6</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2145,7 +2145,7 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.backtick.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^((?!\4)\s+)?\5$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2160,7 +2160,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *HTML\b))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *HTML\b))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2178,7 +2178,7 @@
 					<key>name</key>
 					<string>punctuation.definition.heredoc.perl</string>
 				</dict>
-				<key>4</key>
+				<key>5</key>
 				<dict>
 					<key>patterns</key>
 					<array>
@@ -2192,7 +2192,7 @@
 			<key>contentName</key>
 			<string>text.html.embedded.perl</string>
 			<key>end</key>
-			<string>(^HTML$)</string>
+			<string>(^((?!\4)\s+)?HTML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2211,262 +2211,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *XML\b))(.*)\n?</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.perl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>string.unquoted.heredoc.perl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>text.xml.embedded.perl</string>
-			<key>end</key>
-			<string>(^XML$)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>text.xml</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(((&lt;&lt;) *CSS\b))(.*)\n?</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.perl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>string.unquoted.heredoc.perl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>text.css.embedded.perl</string>
-			<key>end</key>
-			<string>(^CSS$)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.css</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(((&lt;&lt;) *JAVASCRIPT\b))(.*)\n?</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.perl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>string.unquoted.heredoc.perl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>source.js.embedded.perl</string>
-			<key>end</key>
-			<string>(^JAVASCRIPT$)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.js</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(((&lt;&lt;) *SQL\b))(.*)\n?</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.perl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>string.unquoted.heredoc.perl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>source.sql.embedded.perl</string>
-			<key>end</key>
-			<string>(^SQL$)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.sql</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(((&lt;&lt;) *POSTSCRIPT\b))(.*)\n?</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.perl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>string.unquoted.heredoc.perl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.heredoc.perl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>source.postscript.embedded.perl</string>
-			<key>end</key>
-			<string>(^POSTSCRIPT$)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped_char</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.postscript</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(((&lt;&lt;) *((?![=\d\$\( ])[^;,'"`\s\)]*)))(.*)\n?</string>
+			<string>(((&lt;&lt;(~)?) *XML\b))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2496,9 +2241,264 @@
 				</dict>
 			</dict>
 			<key>contentName</key>
+			<string>text.xml.embedded.perl</string>
+			<key>end</key>
+			<string>(^((?!\4)\s+)?XML$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>text.xml</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(((&lt;&lt;(~)?) *CSS\b))(.*)\n?</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.unquoted.heredoc.perl</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.heredoc.perl</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>text.css.embedded.perl</string>
+			<key>end</key>
+			<string>(^((?!\4)\s+)?CSS$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.css</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(((&lt;&lt;(~)?) *JAVASCRIPT\b))(.*)\n?</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.unquoted.heredoc.perl</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.heredoc.perl</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>source.js.embedded.perl</string>
+			<key>end</key>
+			<string>(^((?!\4)\s+)?JAVASCRIPT$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(((&lt;&lt;(~)?) *SQL\b))(.*)\n?</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.unquoted.heredoc.perl</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.heredoc.perl</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>source.sql.embedded.perl</string>
+			<key>end</key>
+			<string>(^((?!\4)\s+)?SQL$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.sql</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(((&lt;&lt;(~)?) *POSTSCRIPT\b))(.*)\n?</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.unquoted.heredoc.perl</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.heredoc.perl</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>source.postscript.embedded.perl</string>
+			<key>end</key>
+			<string>(^((?!\4)\s+)?POSTSCRIPT$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.postscript</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(((&lt;&lt;(~)?) *((?![=\d\$\( ])[^;,'"`\s\)]*)))(.*)\n?</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.perl</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.unquoted.heredoc.perl</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.heredoc.perl</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>contentName</key>
 			<string>string.unquoted.heredoc.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^((?!\4)\s+)?\5$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
