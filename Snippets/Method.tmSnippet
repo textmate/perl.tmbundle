@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>sub ${1:function_name} {
+    my (\$self${2:}) = @_;
+    ${3:# body...}
+}
+</string>
+	<key>disableAutoIndent</key>
+	<true/>
+	<key>name</key>
+	<string>Method</string>
+	<key>scope</key>
+	<string>source.perl</string>
+	<key>tabTrigger</key>
+	<string>meth</string>
+	<key>uuid</key>
+	<string>76F6C52A-3C5B-40C7-AD15-231DC97A0023</string>
+</dict>
+</plist>
