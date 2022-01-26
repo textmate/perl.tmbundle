@@ -4617,6 +4617,39 @@
 					<key>name</key>
 					<string>variable.other.readwrite.global.special.perl</string>
 				</dict>
+				<dict>
+					<key>begin</key>
+					<string>[\$\@\%\&amp;]\{</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.variable.perl</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.embedded.block.perl</string>
+					<key>end</key>
+					<string>\}</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.variable.perl</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>variable.other.readwrite.global.perl</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
 			</array>
 		</dict>
 	</dict>
