@@ -2190,28 +2190,40 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Match empty brackets for ↩ snippet</string>
-			<key>match</key>
-			<string>(\{)(\})</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.section.scope.begin.perl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.section.scope.end.perl</string>
-				</dict>
-			</dict>
-			<key>comment</key>
 			<string>Match empty parenthesis for ↩ snippet</string>
 			<key>match</key>
 			<string>(\()(\))</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.begin.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Match a code block or a hash data.</string>
+			<key>end</key>
+			<string>\}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.end.js</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -4604,6 +4616,47 @@
 					<string>([\$\@\%](#)?)[0-9_]\b</string>
 					<key>name</key>
 					<string>variable.other.readwrite.global.special.perl</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>([\$\@\%\&amp;]\{)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.readwrite.global.special.perl</string>
+						</dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.variable.perl</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.embedded.block.perl</string>
+					<key>end</key>
+					<string>(\})</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.readwrite.global.special.perl</string>
+						</dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.variable.perl</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
