@@ -2195,8 +2195,6 @@
 			<string>(\()(\))</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>Match a code block</string>
 			<key>begin</key>
 			<string>\{</string>
 			<key>beginCaptures</key>
@@ -2207,6 +2205,8 @@
 					<string>punctuation.section.scope.begin.js</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>Match a code block or a hash data.</string>
 			<key>end</key>
 			<string>\}</string>
 			<key>endCaptures</key>
