@@ -14,7 +14,7 @@
 	<key>firstLineMatch</key>
 	<string>(?x)
 # Hashbang
-^\#!.*(?:\s|\/|(?&lt;=!)\b)(?:perl6|nqp)(?:$|\s)
+^\#!.*(?:\s|\/|(?&lt;=!)\b)(?:perl6|nqp|raku)(?:$|\s)
 |
 # Perl 6 pragma
 \buse\s+v6\b
