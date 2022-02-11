@@ -8,6 +8,8 @@
 		<string>pl6</string>
 		<string>pm6</string>
 		<string>nqp</string>
+		<string>raku</string>
+		<string>rakumod</string>
 	</array>
 	<key>firstLineMatch</key>
 	<string>(?x)
